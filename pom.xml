@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.tubmc</groupId>
+	<artifactId>nbt</artifactId>
+	<version>1.0.0</version>
+	<name>NBT</name>
+	<description>NBT manipulation</description>
+	<url>https://github.com/TubMC/NBT</url>
+	<inceptionYear>2023</inceptionYear>
+	<packaging>jar</packaging>
+	
+	<developers>
+		<developer>
+			<name>BradBot_1</name>
+			<url>https://git.bb1.fun/BradBot_1</url>
+			<email>BradBot_1@outlook.com</email>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>England/London</timezone>
+			<properties>
+				<discord-legacy>BradBot_1#2042</discord-legacy>
+				<discord>BradBot_1</discord>
+				<discord-id>283302593529118720</discord-id>
+			</properties>
+		</developer>
+	</developers>
+	
+	<issueManagement>
+		<system>Git</system>
+		<url>https://github.com/TubMC/NBT/issues/new</url>
+	</issueManagement>
+
+	<properties>
+		<java.version>17</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	<repositories>
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
+		<repository>
+			<id>repo</id>
+			<url>https://repo.bb1.fun/releases</url>
+		</repository>
+	</repositories>
+	
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<distribution>repo</distribution>
+			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
+		</license>
+	</licenses>
+	
+	<build>
+		<defaultGoal>clean install</defaultGoal>
+		<finalName>Commons</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version>
+				<configuration>
+					<release>17</release>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.jetbrains</groupId>
+			<artifactId>annotations</artifactId>
+			<version>23.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>fun.bb1</groupId>
+			<artifactId>objects</artifactId>
+			<version>1.7.1</version>
+		</dependency>
+	</dependencies>
+</project>
