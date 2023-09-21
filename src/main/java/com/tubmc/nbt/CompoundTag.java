@@ -22,6 +22,14 @@ public sealed class CompoundTag implements ITag<Map<String, ITag<?>>>, Iterable<
 		return this.map.get(key);
 	}
 	
+	public final void remove(final @NotNull @DisallowsEmptyString String key) {
+		this.map.remove(key);
+	}
+	
+	public final void clear() {
+		this.map.clear();
+	}
+	
 	public final @NotNull Collection<String> getKeys() {
 		return this.map.keySet();
 	}

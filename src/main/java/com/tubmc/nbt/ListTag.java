@@ -31,6 +31,14 @@ public final class ListTag<T extends ITag<?>> implements ITag<List<T>>, Iterable
 		return this.list.get(index);
 	}
 	
+	public final T remove(final int index) {
+		return this.list.remove(index);
+	}
+	
+	public final void clear() {
+		this.list.clear();
+	}
+	
 	public final byte getTypeTagId() {
 		return this.typeTagId;
 	}
@@ -75,4 +83,5 @@ public final class ListTag<T extends ITag<?>> implements ITag<List<T>>, Iterable
 	public final @NotNull Iterator<T> iterator() {
 		return this.list.iterator();
 	}
+	
 }
