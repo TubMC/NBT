@@ -99,7 +99,7 @@ final class NBTWriter implements IStaticMethodsOnly {
 				outputStream.writeLong(lon);
 			}
 		} else {
-			throw new IllegalArgumentException("No tag with id " + tag.getClass().getName());
+			throw new IllegalArgumentException("No tag with name " + tag.getClass().getName());
 		}
 	}
 	
