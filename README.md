@@ -1,4 +1,4 @@
-# TextComponents
+# NBT
 
 A NBT lib with r/w support
 
@@ -26,7 +26,7 @@ Then add the dependency:
 <dependency>
   <groupId>com.tubmc</groupId>
   <artifactId>nbt</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.2</version>
 </dependency>
 ```
 
@@ -71,6 +71,6 @@ Now you can simply add the following dependency without a repository:
 <dependency>
   <groupId>com.tubmc</groupId>
   <artifactId>nbt</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.2</version>
 </dependency>
 ```
