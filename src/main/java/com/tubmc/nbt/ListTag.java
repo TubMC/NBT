@@ -39,6 +39,10 @@ public final class ListTag<T extends ITag<?>> implements ITag<List<T>>, Iterable
 		this.list.clear();
 	}
 	
+	public final int size() {
+		return this.list.size();
+	}
+	
 	public final byte getTypeTagId() {
 		return this.typeTagId;
 	}
