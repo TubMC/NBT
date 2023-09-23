@@ -92,7 +92,6 @@ final class NBTWriter implements IStaticMethodsOnly {
 			outputStream.writeInt(intArrayTag.getSize());
 			for (final Integer in : intArrayTag.getValue()) {
 				outputStream.writeInt(in);
-
 			}
 		} else if (tag instanceof final LongArrayTag longArrayTag) {
 			outputStream.writeInt(longArrayTag.getSize());
