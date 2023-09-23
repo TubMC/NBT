@@ -59,6 +59,7 @@ final class NBTWriter implements IStaticMethodsOnly {
 	
 	private static final void writeListTag(@NotNull final ListTag<?> listTag, @NotNull final DataOutputStream outputStream) throws IOException {
 		outputStream.writeByte(listTag.getTypeTagId());
+		outputStream.writeInt(listTag.size());
 		for (final ITag<?> tag : listTag) {
 			writeTag(tag, outputStream);
 		}
