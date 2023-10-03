@@ -81,7 +81,7 @@ final class NBTWriter implements IStaticMethodsOnly {
 		} else if (tag instanceof final ByteArrayTag byteArrayTag) {
 			outputStream.writeInt(byteArrayTag.getSize());
 			for (final Byte byt : byteArrayTag.getValue()) {
-				outputStream.writeByte(byt);
+				outputStream.writeByte(byt.byteValue());
 			}
 		} else if (tag instanceof final StringTag stringTag) {
 			outputStream.writeUTF(stringTag.getValue());
@@ -92,12 +92,12 @@ final class NBTWriter implements IStaticMethodsOnly {
 		} else if (tag instanceof final IntArrayTag intArrayTag) {
 			outputStream.writeInt(intArrayTag.getSize());
 			for (final Integer in : intArrayTag.getValue()) {
-				outputStream.writeInt(in);
+				outputStream.writeInt(in.intValue());
 			}
 		} else if (tag instanceof final LongArrayTag longArrayTag) {
 			outputStream.writeInt(longArrayTag.getSize());
 			for (final Long lon : longArrayTag.getValue()) {
-				outputStream.writeLong(lon);
+				outputStream.writeLong(lon.longValue());
 			}
 		} else {
 			throw new IllegalArgumentException("No tag with name " + tag.getClass().getName());
