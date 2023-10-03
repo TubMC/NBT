@@ -6,9 +6,12 @@ import org.jetbrains.annotations.NotNull;
 
 public final class LongArrayTag extends AbstractValueArrayTag<Long> {
 	
-	public LongArrayTag() { }
+	public LongArrayTag() {
+		super(Long.class);
+	}
 	
 	public LongArrayTag(@NotNull final long[] array) {
+		super(Long.class);
 		this.array.clear();
 		for (final long lon : array) {
 			this.array.add(lon);
@@ -16,6 +19,7 @@ public final class LongArrayTag extends AbstractValueArrayTag<Long> {
 	}
 	
 	public LongArrayTag(@NotNull final Collection<Long> collection) {
+		super(Long.class);
 		this.array.clear();
 		this.array.addAll(collection);
 	}

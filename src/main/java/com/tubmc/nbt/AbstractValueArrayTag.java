@@ -1,7 +1,8 @@
 package com.tubmc.nbt;
 
-import java.util.ArrayList;
+import java.lang.reflect.Array;
 import java.util.Collections;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.jetbrains.annotations.ApiStatus.Internal;
 import org.jetbrains.annotations.NotNull;
@@ -9,9 +10,12 @@ import org.jetbrains.annotations.NotNull;
 @Internal
 abstract sealed class AbstractValueArrayTag<T> implements ITag<T[]> permits ByteArrayTag, IntArrayTag, LongArrayTag {
 	
-	protected transient ArrayList<T> array = new ArrayList<T>();
+	protected transient @NotNull CopyOnWriteArrayList<T> array = new CopyOnWriteArrayList<T>();
+	private final @NotNull Class<T> type;
 	
-	protected AbstractValueArrayTag() { }
+	protected AbstractValueArrayTag(final @NotNull Class<T> type) {
+		this.type = type;
+	}
 	
 	public final void add(@NotNull final T newElement) {
 		this.array.add(newElement);
@@ -38,7 +42,7 @@ abstract sealed class AbstractValueArrayTag<T> implements ITag<T[]> permits Byte
 	@SuppressWarnings("unchecked")
 	@Override
 	public final @NotNull T[] getValue() {
-		return (T[]) this.array.toArray();
+		return this.array.toArray((T[]) Array.newInstance(this.type, this.array.size()));
 	}
 	/**
 	 * {@inheritDoc}
