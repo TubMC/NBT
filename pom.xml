@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.tubmc</groupId>
 	<artifactId>nbt</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<name>NBT</name>
 	<description>NBT manipulation</description>
 	<url>https://github.com/TubMC/NBT</url>
