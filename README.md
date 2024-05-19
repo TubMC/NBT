@@ -8,7 +8,7 @@ NBT is available on Maven from either the [Official Maven Repository](https://re
 
 ### Official Repository
 
-The latest version is hosted on an [Official Maven Repository](https://repo.bb1.fun/#/releases/com/tubmc/NBT)
+The latest version is hosted on an [Official Maven Repository](https://repo.bb1.fun/#/releases/com/tubmc/nbt)
 
 First include the repository:
 
@@ -26,7 +26,7 @@ Then add the dependency:
 <dependency>
   <groupId>com.tubmc</groupId>
   <artifactId>nbt</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.4</version>
 </dependency>
 ```
 
@@ -71,6 +71,6 @@ Now you can simply add the following dependency without a repository:
 <dependency>
   <groupId>com.tubmc</groupId>
   <artifactId>nbt</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.4</version>
 </dependency>
 ```
