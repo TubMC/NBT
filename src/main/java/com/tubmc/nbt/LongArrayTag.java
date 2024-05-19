@@ -28,7 +28,7 @@ public final class LongArrayTag extends AbstractValueArrayTag<Long> {
 	 */
 	@Override
 	public final byte getTagId() {
-		return 11;
+		return 12;
 	}
 	/**
 	 * {@inheritDoc}
